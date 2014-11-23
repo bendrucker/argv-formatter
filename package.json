@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/bendrucker/argv-formatter",
   "devDependencies": {
-    "chai": "~1.10.0"
+    "chai": "~1.10.0",
+    "mocha": "~2.0.1"
   }
 }
