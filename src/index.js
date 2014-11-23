@@ -21,7 +21,7 @@ exports.format = function formatArgv (object) {
       if (arg.single) {
         args.push(arg.flag);
         if (arg.value !== true) {
-          args.push(arg.value);
+          args.push(arg.value.toString());
         }
       }
       else {

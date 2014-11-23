@@ -29,4 +29,12 @@ describe('argv-formatter', function () {
     assert({reporter: true}, ['--reporter']);
   });
 
+  it('stringifies object values (single)', function () {
+    assert({O: {
+      toString: function () {
+        return 'value';
+      }
+    }}, ['-O', 'value']);
+  });
+
 });
