@@ -18,7 +18,7 @@ Accepts an `object` of containing options and arguments and returns an array of 
 * options with a value of `true` will be included with a flag only (`{R: true}` -> `['-R']`)
 * options that are falsey will be removed
 * all values will be stringified, (`{D: new Date(0)}` -> `['-D', 'Thurs Jan 1 1970...']`)
-* arguments can be passed under the `_` key as a value of array of values
+* arguments can be passed under the `_` key as a value or array of values
 
 ## Examples
 
