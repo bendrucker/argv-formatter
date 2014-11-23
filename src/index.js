@@ -19,10 +19,18 @@ exports.format = function formatArgv (object) {
     })
     .reduce(function (args, arg) {
       if (arg.single) {
-        args.push(arg.flag, arg.value);
+        args.push(arg.flag);
+        if (arg.value !== true) {
+          args.push(arg.value);
+        }
       }
       else {
-        args.push(arg.flag + '=' + arg.value);
+        if (arg.value !== true) {
+          args.push(arg.flag + '=' + arg.value);
+        }
+        else {
+          args.push(arg.flag);
+        }
       }
       return args;
     }, []);

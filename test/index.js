@@ -21,4 +21,12 @@ describe('argv-formatter', function () {
     assert({reporter: false}, []);
   });
 
+  it('only includes a flag for true (single)', function () {
+    assert({R: true}, ['-R']);
+  });
+
+  it('only includes a flag for true (multi)', function () {
+    assert({reporter: true}, ['--reporter']);
+  });
+
 });
