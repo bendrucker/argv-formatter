@@ -37,4 +37,20 @@ describe('argv-formatter', function () {
     }}, ['-O', 'value']);
   });
 
+  it('stringifies object values (single)', function () {
+    assert({O: {
+      toString: function () {
+        return 'value';
+      }
+    }}, ['-O', 'value']);
+  });
+
+  it('can handle one non-option argument', function () {
+    assert({_: 'foo'}, ['foo']);
+  });
+
+  it('can handle multiple non-option arguments', function () {
+    assert({_: ['foo', 'bar']}, ['foo', 'bar']);
+  });
+
 });

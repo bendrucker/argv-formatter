@@ -9,8 +9,11 @@ function argify (key, value) {
   };
 }
 
-exports.format = function formatArgv (object) {
+function options (object) {
   return Object.keys(object)
+    .filter(function (key) {
+      return key !== '_';
+    })
     .map(function (key) {
       return argify(key, object[key]);
     })
@@ -34,4 +37,14 @@ exports.format = function formatArgv (object) {
       }
       return args;
     }, []);
+}
+
+exports.format = function formatArgv (object) {
+  var args = options(object);
+  var _ = object._;
+  if (_) {
+    _ = Array.isArray(_) ? _ : [_];
+    args.push.apply(args, _);
+  }
+  return args;
 };
