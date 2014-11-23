@@ -61,4 +61,8 @@ describe('argv-formatter', function () {
     assert({_: ['foo', 'bar']}, ['foo', 'bar']);
   });
 
+  it('returns an empty array for an empty object', function () {
+    assert({}, []);
+  });
+
 });
