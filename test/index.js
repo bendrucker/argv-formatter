@@ -17,4 +17,8 @@ describe('argv-formatter', function () {
     assert({reporter: 'spec'}, ['--reporter=spec']);
   });
 
+  it('removes falsy arguments', function () {
+    assert({reporter: false}, []);
+  });
+
 });

@@ -14,6 +14,9 @@ exports.format = function formatArgv (object) {
     .map(function (key) {
       return argify(key, object[key]);
     })
+    .filter(function (arg) {
+      return arg.value;
+    })
     .reduce(function (args, arg) {
       if (arg.single) {
         args.push(arg.flag, arg.value);
