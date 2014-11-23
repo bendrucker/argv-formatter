@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/bendrucker/argv-formatter/issues"
   },
-  "homepage": "https://github.com/bendrucker/argv-formatter"
+  "homepage": "https://github.com/bendrucker/argv-formatter",
+  "devDependencies": {
+    "chai": "~1.10.0"
+  }
 }
