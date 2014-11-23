@@ -39,15 +39,16 @@ function options (object) {
     }, []);
 }
 
-exports.format = function formatArgv (object) {
-  var args = options(object);
-  var _ = object._;
-  if (_) {
-    _ = Array.isArray(_) ? _ : [_];
-    _ = _.map(function (value) {
-      return value.toString();
-    });
-    args.push.apply(args, _);
+function args (object) {
+  if (object._) {
+    return (Array.isArray(object._) ? object._ : [object._])
+      .map(function (value) {
+        return value.toString();
+      });
   }
-  return args;
+  return [];
+}
+
+exports.format = function formatArgv (object) {
+  return options(object).concat(args(object));
 };
