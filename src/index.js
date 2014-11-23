@@ -44,6 +44,9 @@ exports.format = function formatArgv (object) {
   var _ = object._;
   if (_) {
     _ = Array.isArray(_) ? _ : [_];
+    _ = _.map(function (value) {
+      return value.toString();
+    });
     args.push.apply(args, _);
   }
   return args;
