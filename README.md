@@ -1,4 +1,4 @@
-argv-formatter [![Build Status](https://travis-ci.org/bendrucker/argv-formatter.svg?branch=master)](https://travis-ci.org/bendrucker/argv-formatter)
+argv-formatter [![Build Status](https://travis-ci.org/bendrucker/argv-formatter.svg?branch=master)](https://travis-ci.org/bendrucker/argv-formatter) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/argv-formatter.svg)](https://greenkeeper.io/)
 ==============
 
 Bizarro [minimist](https://github.com/substack/minimist): transform an options object into into a `process.argv`-like array. Helpful for using `child_process` and passing complex arguments more easily. 
