@@ -1,12 +1,4 @@
 language: node_js
 node_js:
-- '0.10'
-deploy:
-  provider: npm
-  email: bvdrucker@gmail.com
-  api_key:
-    secure: SAAep5SsdBXTVYgZ5Ao+CdUhmh+i/EjFdQ12hzBzZ9cLXq7iBW/Tw79d9DRVLptTrs0njJ5DDX2alNc3S6SKfahVXuQgxTPXBcOAZGStWyF5sPi50XWCAyQ4gGVkXBbZCG9p1I09sMPH3lasWS9VPzaDrKV7ITmun6BcnXv/6h4=
-  on:
-    tags: true
-    all_branches: true
-    repo: bendrucker/argv-formatter
+  - 'lts/*'
+  - 'node'
